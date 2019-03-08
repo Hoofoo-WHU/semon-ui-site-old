@@ -1,9 +1,15 @@
 import React from 'react'
-import { Root } from 'react-static'
-import Index from './pages/index'
+import { Root, Routes } from 'react-static'
+import './App.scss'
 
-export default () => (
-  <Root>
-    <Index />
-  </Root>
-)
+class App extends React.Component {
+  render() {
+    return (
+      <Root autoScrollToTop={false}>
+        <Routes>
+        </Routes>
+      </Root>
+    )
+  }
+}
+export default App

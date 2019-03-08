@@ -1,0 +1,8 @@
+// 移除react-static的loading动画
+body {
+  margin: 0;
+  padding: 0;
+}
+.react-static-loading {
+  display: none !important;
+}

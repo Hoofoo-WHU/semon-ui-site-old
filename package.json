@@ -1,25 +1,29 @@
 {
-  "name": "react-static-example-typescript",
+  "name": "semon-ui-site",
   "private": true,
   "scripts": {
     "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
-    "bundle": "react-static bundle",
-    "export": "react-static export",
-    "serve": "serve dist -p 3000 -s"
+    "build": "react-static build && mv dist docs",
+    "serve": "serve docs -p 3000 -s"
   },
   "dependencies": {
+    "@semon/semon-ui": "^0.0.6",
+    "nprogress": "^0.2.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-hot-loader": "^4.3.12",
-    "react-static": "^6.0.18"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-static": "^6.0.18",
+    "react-static-plugin-sass": "^6.3.0"
   },
   "devDependencies": {
     "@types/node": "^10.12.23",
+    "@types/nprogress": "^0.0.29",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
     "@types/react-hot-loader": "^4.1.0",
+    "@types/react-router-dom": "^4.3.1",
     "@types/webpack-env": "^1.13.6",
     "react-static-plugin-typescript": "^3.1.0",
     "serve": "^10.1.2"
