@@ -18,13 +18,11 @@ export default (props: RouteComponentProps) => {
   const [opens, setOpens] = useState([])
   return (
     <Menu className='doc-menu' activeName={props.location.pathname}
-      // onChange={(name) => setActiveName(name)}
       opens={opens}
       onOpenChange={opens => setOpens(opens)}
-      style={{ minWidth: 270 }}
     >
-      <Item path='/introduce'>简介</Item>
-      <Item path='/getting-started'>快速开始</Item>
+      <Item path='/introduce'>Semon UI</Item>
+      <Item path='/getting-started'>快速上手</Item>
     </Menu>
   )
 }

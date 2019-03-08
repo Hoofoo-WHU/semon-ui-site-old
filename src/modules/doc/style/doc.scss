@@ -3,4 +3,6 @@
   overflow: scroll;
   position: -webkit-sticky;
   position: sticky;
+  flex-shrink: 0;
+  top: 0;
 }

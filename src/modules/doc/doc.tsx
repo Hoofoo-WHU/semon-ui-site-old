@@ -6,7 +6,7 @@ import { RouteComponentProps } from 'react-router-dom'
 import Route from '@components/progress-route'
 import './style/doc.scss'
 
-const { Sider, Content } = Layout
+const { Sider, Content, Footer } = Layout
 
 export default (props: RouteComponentProps) => {
   const genPath = (path: string) => props.match.path + path
@@ -15,9 +15,12 @@ export default (props: RouteComponentProps) => {
       <Sider className='doc-sider'>
         <Route component={Menu} />
       </Sider>
-      <Content>
-        <Route path={genPath('/:title')} component={Post} />
-      </Content>
+      <Layout>
+        <Content>
+          <Route path={genPath('/:title')} component={Post} />
+        </Content>
+        <Footer></Footer>
+      </Layout>
     </Layout>
   )
 }

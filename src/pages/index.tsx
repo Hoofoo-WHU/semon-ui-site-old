@@ -13,9 +13,9 @@ export default withSiteData(({ dev }) => {
   return (
     <BrowserRouter basename={dev ? '' : "docs"}>
       <Layout>
-        <Header>
-          <Link to='/index'>Home</Link>
-          <Link to='/doc/introduce'>Doc</Link>
+        <Header className='page-header'>
+          <Link to='/index'>主页</Link>
+          <Link to='/doc/introduce'>组件</Link>
         </Header>
         <Content>
           <Switch>

@@ -23,8 +23,8 @@ export default {
     'react-static-plugin-sass'
   ],
   entry: path.join(__dirname, 'src', 'index.tsx'),
-  // siteRoot: 'https://hoofoo-whu.github.io',
-  basePath: 'docs',
+  siteRoot: 'https://hoofoo-whu.github.io',
+  basePath: 'semon-ui-site',
   paths: {
     dist: 'docs'
   },

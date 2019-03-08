@@ -20,6 +20,9 @@
       ],
       "@modules/*": [
         "src/modules/*"
+      ],
+      "@posts/*": [
+        "src/posts/*"
       ]
     },
     "lib": [
