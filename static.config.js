@@ -23,10 +23,15 @@ export default {
     'react-static-plugin-sass'
   ],
   entry: path.join(__dirname, 'src', 'index.tsx'),
+  // siteRoot: 'https://hoofoo-whu.github.io',
+  basePath: 'docs',
+  paths: {
+    dist: 'docs'
+  },
   minLoadTime: 0,
-  devBasepath: '/abc',
-  getSiteData: () => ({
-    title: 'Semon UI'
+  getSiteData: ({ dev }) => ({
+    title: 'Semon UI',
+    dev
   }),
   getRoutes: () => {
     return resolveComponent([

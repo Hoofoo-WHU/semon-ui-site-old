@@ -3,18 +3,22 @@ import { Menu } from '@semon/semon-ui'
 import { RouteComponentProps, Link } from 'react-router-dom'
 import './style/menu.scss'
 
+let _props: RouteComponentProps
+const genPath = (path: string) => _props.match.path + path
+
 function Item({ path, children }: { path: string, children?: ReactNode }) {
+  const realPath = genPath(path)
   return (
-    <Menu.Item name={path}><Link className='menu-item-link' to={path}></Link>{children}</Menu.Item>
+    <Menu.Item name={realPath}><Link className='menu-item-link' to={realPath}></Link>{children}</Menu.Item>
   )
 }
 
-export default ({ location }: RouteComponentProps) => {
-  const [activeName, setActiveName] = useState(location.pathname)
+export default (props: RouteComponentProps) => {
+  _props = props
   const [opens, setOpens] = useState([])
   return (
-    <Menu className='doc-menu' activeName={activeName}
-      onChange={(name) => setActiveName(name)}
+    <Menu className='doc-menu' activeName={props.location.pathname}
+      // onChange={(name) => setActiveName(name)}
       opens={opens}
       onOpenChange={opens => setOpens(opens)}
       style={{ minWidth: 270 }}

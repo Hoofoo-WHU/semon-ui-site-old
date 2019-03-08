@@ -2,23 +2,22 @@ import React from 'react'
 import { Layout } from '@semon/semon-ui'
 import Menu from './menu'
 import Post from './post'
-import { BrowserRouter } from 'react-router-dom'
+import { RouteComponentProps } from 'react-router-dom'
 import Route from '@components/progress-route'
 import './style/doc.scss'
 
 const { Sider, Content } = Layout
 
-export default () => {
+export default (props: RouteComponentProps) => {
+  const genPath = (path: string) => props.match.path + path
   return (
-    <BrowserRouter basename='doc'>
-      <Layout>
-        <Sider className='doc-sider'>
-          <Route component={Menu} />
-        </Sider>
-        <Content>
-          <Route path='/:title' component={Post} />
-        </Content>
-      </Layout>
-    </BrowserRouter>
+    <Layout>
+      <Sider className='doc-sider'>
+        <Route component={Menu} />
+      </Sider>
+      <Content>
+        <Route path={genPath('/:title')} component={Post} />
+      </Content>
+    </Layout>
   )
 }

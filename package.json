@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "react-static start",
-    "build": "react-static build && mv dist docs",
+    "build": "react-static build",
     "serve": "serve docs -p 3000 -s"
   },
   "dependencies": {
@@ -14,7 +14,7 @@
     "react-hot-loader": "^4.3.12",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-static": "^6.0.18",
+    "react-static": "^6.3.6",
     "react-static-plugin-sass": "^6.3.0"
   },
   "devDependencies": {
