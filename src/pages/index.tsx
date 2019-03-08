@@ -11,7 +11,7 @@ const { Header, Content } = Layout
 
 export default withSiteData(({ dev }) => {
   return (
-    <BrowserRouter basename={dev ? '' : "docs"}>
+    <BrowserRouter basename={dev ? '' : "semon-ui-site"}>
       <Layout>
         <Header className='page-header'>
           <Link to='/index'>主页</Link>

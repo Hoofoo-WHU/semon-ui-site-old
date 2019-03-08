@@ -3803,7 +3803,7 @@ var Header = semon_ui_["Layout"].Header,
 /* harmony default export */ var pages = __webpack_exports__["default"] = (Object(lib["withSiteData"])(function (_ref) {
   var dev = _ref.dev;
   return external_react_default.a.createElement(external_react_router_dom_["BrowserRouter"], {
-    basename: dev ? '' : "docs"
+    basename: dev ? '' : "semon-ui-site"
   }, external_react_default.a.createElement(semon_ui_["Layout"], null, external_react_default.a.createElement(Header, {
     className: "page-header"
   }, external_react_default.a.createElement(external_react_router_dom_["Link"], {
@@ -6575,4 +6575,4 @@ if (typeof document !== 'undefined') {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.c5738041.js.map
+//# sourceMappingURL=static.dd053ae8.js.map
